@@ -1,7 +1,9 @@
+import { Todo } from "./components/Todo";
+
 export function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <Todo />
     </div>
   );
 }
