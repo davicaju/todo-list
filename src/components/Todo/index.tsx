@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Header } from "../Header";
 
 interface Task {
   id: number;
@@ -50,7 +51,7 @@ export function Todo() {
 
   return (
     <div>
-      <h1>To.do</h1>
+      <Header />
       <div>
         <input
           type="text"
