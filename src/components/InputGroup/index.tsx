@@ -1,3 +1,5 @@
+import "./styles.scss";
+
 interface InputGroupProps {
   value: string;
   setValue: (e: any) => void;
@@ -6,9 +8,10 @@ interface InputGroupProps {
 
 export function InputGroup({ value, setValue, onCreateTask }: InputGroupProps) {
   return (
-    <div>
+    <div className="inputGroup">
       <input
         type="text"
+        placeholder="Add your activity here"
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
