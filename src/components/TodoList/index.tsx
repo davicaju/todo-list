@@ -1,4 +1,8 @@
+import { BsTrash } from "react-icons/bs";
+
 import { Task } from "../../App";
+
+import "./styles.scss";
 
 interface TodoListProps {
   tasks: Task[];
@@ -12,11 +16,12 @@ export function TodoList({
   handleDeleteTask,
 }: TodoListProps) {
   return (
-    <div>
-      <div>
-        <ul>
-          {tasks.map((task) => (
-            <li key={task.id}>
+    <div className="todoList">
+      <ul>
+        <h2>My tasks</h2>
+        {tasks.map((task) => (
+          <li key={task.id}>
+            <div className="leftContent">
               <input
                 type="checkbox"
                 checked={task.isCompleted}
@@ -30,11 +35,16 @@ export function TodoList({
               >
                 {task.title}
               </p>
-              <button onClick={() => handleDeleteTask(task.id)}>remove</button>
-            </li>
-          ))}
-        </ul>
-      </div>
+            </div>
+
+            <BsTrash
+              className="trashIcon"
+              size={20}
+              onClick={() => handleDeleteTask(task.id)}
+            />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

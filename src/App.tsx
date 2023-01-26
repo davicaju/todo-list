@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 
 import { Header } from "./components/Header";
 import { TodoList } from "./components/TodoList";
@@ -26,7 +26,8 @@ export function App() {
     loadTasksFromLocalStorage();
   }, []);
 
-  function handleCreateTask() {
+  function handleCreateTask(e: FormEvent) {
+    e.preventDefault();
     if (!value) {
       return;
     }

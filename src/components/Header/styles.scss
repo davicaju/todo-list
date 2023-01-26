@@ -1,10 +1,14 @@
 header {
-    background: #273FAD;
-    color: white;
+  background: #273fad;
+  color: white;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    height: 100px;
+  height: 150px;
+
+  h1 {
+    font-size: 3rem;
+  }
 }
